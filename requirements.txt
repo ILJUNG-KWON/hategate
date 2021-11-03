@@ -8,8 +8,6 @@ telegram==0.0.1
 kobert @ git+https://git@github.com/SKTBrain/KoBERT.git@8df69ec6b588ae661bef98d28ec29448482bbe6e
 tokenizers==0.8.1rc1
 torch==1.10.0+cpu
-torchaudio==0.10.0+cpu
-torchvision==0.11.1+cpu
 tqdm==4.51.0
 transformers==3.0.2
 xlrd==2.0.1
