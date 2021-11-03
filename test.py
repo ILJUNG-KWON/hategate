@@ -157,14 +157,6 @@ tokenizer = get_tokenizer()
 tok = nlp.data.BERTSPTokenizer(tokenizer, vocab, lower=False)
    
 
-# end = 1
-# while end == 1 :
-#     sentence = input("하고싶은 말을 입력해주세요 : ")
-#     if sentence == 0 :
-#         break
-#     predict(sentence)
-#     print("\n")
-
 def mespredict(predict_sentence):
     
     data = [predict_sentence, '0']

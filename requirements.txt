@@ -1,9 +1,7 @@
 -f https://download.pytorch.org/whl/torch_stable.html
 gluonnlp==0.10.0
-mxnet==1.7.0.post1
 openpyxl==3.0.9
 python-telegram-bot==13.7
-sentencepiece==0.1.96
 telegram==0.0.1
 kobert @ git+https://git@github.com/SKTBrain/KoBERT.git@8df69ec6b588ae661bef98d28ec29448482bbe6e
 tokenizers==0.8.1rc1
