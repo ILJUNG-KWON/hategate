@@ -209,18 +209,26 @@ hate_dict = {'한국 남자': ['한남충', '김치남', '씹치남', '숫센징
  '흑인여성': ['흑누나'],
  '아프리카': ['좆프리카']}
 
+#웹 
+
 keys = list(hate_dict.keys())
 values = list(hate_dict.values())
 
 def purifier(string):
     key_li = []
     val_li = []
-    for i in range(len(keys)):
-        for j in range(len(values[i])):
-            if values[i][j] in string:
-                key_li.append(keys[i])
-                val_li.append(values[i][j])
-                
+    str_li = list(string.split())
+    
+    for s in range(len(str_li)):
+        cnt=0
+        for i in range(len(keys)):
+            for j in range(len(values[i])):
+                if (values[i][j] in str_li[s]) and (values[i][j] not in val_li):
+                    key_li.append(keys[i])
+                    val_li.append(values[i][j])
+                    cnt+=1
+                if cnt>=1:
+                    break;                
     if len(key_li) >= 1:
         mes_li =["이렇게 바꾸어 표현해주세요!"]
         for j in range(len(key_li)):
@@ -229,23 +237,30 @@ def purifier(string):
         return mes_li
     else:
         return ""
-
     
     
     
 """
-텔레그램    
+#텔레봇 
+
 keys = list(hate_dict.keys())
 values = list(hate_dict.values())
 
 def purifier(string):
     key_li = []
     val_li = []
-    for i in range(len(keys)):
-        for j in range(len(values[i])):
-            if values[i][j] in string:
-                key_li.append(keys[i])
-                val_li.append(values[i][j])
+    str_li = list(string.split())
+    
+    for s in range(len(str_li)):
+        cnt=0
+        for i in range(len(keys)):
+            for j in range(len(values[i])):
+                if (values[i][j] in str_li[s]) and (values[i][j] not in val_li):
+                    key_li.append(keys[i])
+                    val_li.append(values[i][j])
+                    cnt+=1
+                if cnt>=1:
+                    break;   
                 
     if len(key_li)== 1:            
         purified_mes = f"'{val_li[0]}'(을)를 '{key_li[0]}'(으)로 바꾸어 표현해주세요!"
