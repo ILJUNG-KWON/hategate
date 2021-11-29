@@ -266,12 +266,13 @@ header .sub-menu li a:hover {
 /* Feature section */
 .section--feature {
   background: #f5f5f5;
-  padding-top: 50px;
-  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  height: 755px;
 }
 .section--feature1 {
   background: #f5f5f5;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 30px;
   height: 500px;
 }
@@ -279,7 +280,7 @@ header .sub-menu li a:hover {
   background: #ffffff;
   padding: 30px;
   margin:10px;
-  min-height: 500px;
+  min-height: 800px;
   text-align: center;
 }
 .section--feature .summary {
@@ -577,4 +578,11 @@ footer{
   font-size: 50px;
   text-align: center;
   line-height: 300px;
+}
+
+
+video {
+  display: block;
+  max-width: 65%;
+  margin: 20px auto;
 }

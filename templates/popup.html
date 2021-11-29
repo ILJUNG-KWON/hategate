@@ -1,1 +1,152 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/61cbaa6e6f.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>GoldenGate</title>
+
+
+    <link rel="icon" href="favicon.png">
+    <!-- 스마트콘 파비콘 -->
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- 폰트 적용 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- 호출 순서 중요 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="./static/js/index.js"></script>  
+
+</head>
+
+
+    
+<body>
+    <nav id="navbar" class="navbar">
+        <ul class="nav-menu">
+            <li>
+            <a data-scroll="one" href="#one" class="dot">
+                <span>혐오 표현 탐지기</span>
+            </a>
+            </li>
+            <li>
+            <a data-scroll="two" href="#two" class="dot">
+                <span>텔레그램 봇</span>
+            </a>
+            </li>
+            <li>
+            <a data-scroll="three" href="#three" class="dot">
+                <span>팀 소개</span>
+            </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="body__container">
+
+        <section id="one">
+            <!-- VISUAL -->
+            <!-- <section class="section section--visual"> -->
+                <div class="inner">
+                    <img src="static/img/wallpaper.png" style="width:100%; height:auto;">
+                </div>
+            <!-- </section> -->
+
+            <!-- FEATURE -->
+            <section class="section section--feature">
+
+                <div class="summary" style="padding:5px;">
+                    <h2 class="summary__title">
+                        😎골든게이트의 혐오표현 감지 사이트입니다.
+                    </h2>
+                    <p class="summary__description">
+                        하단에 메시지를 입력하고 '결과 보기' 버튼을 눌러주세요.
+                    </p>
+                    <br></br>
+                    <form id="search-form" action = "/result" method = "POST">
+        
+                        <textarea rows="8" cols="60" name="user_mes" id="search" class="input--text" 
+                                  placeholder="메세지를 입력해주세요✍" style="width:500px; height:100px;" ></textarea>
+                        
+                        <br></br>
+                        <p>
+                            <input type="submit", value="결과보기" class="btn btn--primary sign-up" margin:auto/>
+                        </p>
+                    </form>
+                    <br> 
+                    <br> 
+                    <br> 
+                    <br> 
+                </div>
+            </section>
+        </section>
+        
+        <section id="two">
+                <section class="section section--feature2">
+                    <div style="float:left; width:350px; margin-left:50px;">
+                        <img src="static/img/telegroup.png" style="width:380px; padding:10px; margin:10px; margin-top:90px;">
+                    </div>
+                    
+                    <div style=" margin-left:20px; margin-top: 100px;">
+                        <body style="min-width:1370px;" align="center">
+                        <video controls>
+                            <source src="./static/img/telegram_video.mp4" type="video/mp4">
+                            <!-- <source src="./static/img/telegram_video.ogg" type="video/ogg"> -->
+                           이 브라우저에서 지원하지 않는 영상입니다.
+                        </video>
+
+
+
+    <!-- <source src="/media/cc0-videos/flower.mp4" type="video/mp4"> -->
+
+                        
+                        <!-- <h2 class="summary__title">텔레그램 봇 사용하기</h2>
+                        <p class="summary__description">텔레그램 검색창에 @gatehatebot을 검색하고 <br>사용하고 있는 단체채팅방에 봇을 추가해보세요.🙏</p> -->
+                    </div>
+                </section>
+            </section>
+
+        <section id="three">
+                <section class="section section--feature"> 
+                    <div class="summary" style = "margin-top: 30px;">
+                        <h2 class="summary__title">골든게이트🌉</h2>
+                        <p class="summary__description">Hate Speech Gate는 KoBERT에 혐오 표현 데이터셋을 학습시켜 만든 혐오 표현 탐지기입니다. <br>혐오 표현은 성, 지역, 인종, 정치성향, 세대, 종교
+총 6개의 카테고리로 나누었으며,<br>욕설 마스킹 기능과 순화 표현 추천 기능을 구현했습니다.
+<br>이 프로젝트가 혐오 표현에 대한 인식 개선과<br>혐오 표현 사용을 
+단절하는 과정의 일환이 되었으면 좋겠습니다.</p>
+                        
+                        <p class="summary__description"></p>
+                    </div>
+                    <div class="video">
+                        <div style="text-align : center;">
+                            <img src="static/img/aboutme.png" style="width:330px;">
+                        </div>
+                    </div>
+                </section>
+                <div class="tiles">
+                    <div class="inner">
+                    </div>
+                </div>
+            </section>
+        
+        <!-- Footer -->
+
+            <div class="inner clearfix">
+
+
+                <div class="float--center">
+                    <a href="https://www.facebook.com/Golden_Gate-FinalProject_bot-107382691748735" target="_blank" ><i class="fab fa-facebook fa-2x" style="color:#C3C3C3; padding:7px;"></i></a>
+                    <a href="#"><i class="fab fa-github fa-2x" style="color:#C3C3C3; padding:7px;"></i></a>
+                    <a href="https://t.me/gatehatebot" target="_blank" title="봇을 사용하여 성능을 확인해보세요."><i class="fab fa-telegram-plane fa-2x" style="color:#C3C3C3; padding:7px;"></i></a>
+
+                </div>
+
+            </div>
+        </footer>
+        <script src="/static/js/index.js" defer></script>
+
+    </div>
+</body>
+</html>
