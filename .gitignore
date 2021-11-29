@@ -3,3 +3,7 @@ goorm.manifest
 dataset.xlsx
 comment.xlsx
 comment_modify.xlsx
+app2.py
+Procfile
+requirements.txt
+runtime.txt
